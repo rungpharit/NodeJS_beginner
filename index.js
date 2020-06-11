@@ -54,7 +54,7 @@ const server = http.createServer((req,res) => {
       //page not found
       fs.readFile(path.join(__dirname,'public','404.html'),
         (err,content) => {
-          res.writeHead(200,{'Content-Type' : 'text/html'});
+          res.writeHead(404,{'Content-Type' : 'text/html'});
           res.end(content,'utf8');
         }
       )
